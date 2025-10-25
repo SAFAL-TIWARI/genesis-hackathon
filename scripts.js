@@ -29,3 +29,65 @@
                 }
             });
         });
+
+        // --- Mission Text Typing Animation ---
+        function initMissionAnimation() {
+            const missionLine = document.querySelector('.mission-line');
+            if (!missionLine) return;
+
+            const missionTexts = [
+                '🏆 Winners don\'t wait — they build.',
+                '⚙️ Code. Create. Compete. Conquer.',
+                '🔧 Break problems, build solutions.',
+                '💪 Your team. Your vision. Your victory.'
+            ];
+
+            let currentTextIndex = 0;
+            let currentCharIndex = 0;
+            let isDeleting = false;
+
+            function typeMission() {
+                const currentText = missionTexts[currentTextIndex];
+
+                if (!isDeleting) {
+                    // Typing
+                    missionLine.textContent = currentText.substring(0, currentCharIndex + 1);
+                    currentCharIndex++;
+
+                    if (currentCharIndex === currentText.length) {
+                        // Finished typing, pause before deleting
+                        setTimeout(() => {
+                            isDeleting = true;
+                            setTimeout(typeMission, 500);
+                        }, 2000); // Display for 2 seconds
+                        return;
+                    }
+                } else {
+                    // Deleting
+                    missionLine.textContent = currentText.substring(0, currentCharIndex - 1);
+                    currentCharIndex--;
+
+                    if (currentCharIndex === 0) {
+                        // Finished deleting, move to next text
+                        isDeleting = false;
+                        currentTextIndex = (currentTextIndex + 1) % missionTexts.length;
+                        setTimeout(typeMission, 500); // Pause before typing next
+                        return;
+                    }
+                }
+
+                // Continue animation
+                const speed = isDeleting ? 5 : 30;
+                setTimeout(typeMission, speed);
+            }
+
+            // Start the animation
+            setTimeout(typeMission, 500);
+        }
+
+        // Initialize mission animation when DOM is loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initMissionAnimation);
+        } else {
+            initMissionAnimation();
+        }
