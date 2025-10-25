@@ -367,6 +367,11 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
+
+        .btn-rsvp {
+            background-color: var(--gdg-blue);
+            color: white;
+        }
         
         .btn-ppt {
             background-color: var(--text-light-gray);
