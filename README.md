@@ -92,11 +92,6 @@ For more FAQs, visit the website's FAQ section.
 
 ---
 
-## 📜 License
-
-This project is maintained by **Google Developer Groups On Campus SATI Vidisha** and is available for educational and community purposes.
-
----
 
 ## 📝 Notes
 
@@ -117,6 +112,12 @@ If you have any questions or need assistance, please:
 
 ---
 
+## Live Demo
+
+🔗 Live Project: [Genesis Hackathon](https://safal-tiwari.github.io/genesis-hackathon/)
+
+---
+
 <div style align="center">
 
 <img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="50px" />&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="50px" />&nbsp;&nbsp;&nbsp;<img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="50px" />
@@ -129,3 +130,4 @@ If you have any questions or need assistance, please:
 ---
 
 © 2025 Google Developer Groups On Campus SATI Vidisha. All rights reserved.
+
