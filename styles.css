@@ -593,22 +593,39 @@
 
         .social-links {
             margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.75rem;
         }
         
         .social-links a {
             text-decoration: none;
-            margin: 0 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .social-links svg {
+        .social-links img {
             width: 30px;
             height: 30px;
-            fill: var(--text-light-gray);
-            transition: fill 0.3s ease;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            display: flex;
+            align-items: center;
         }
         
-        .social-links a:hover svg {
-            fill: var(--gdg-blue);
+        .social-links img[alt="LinkedIn"]{
+            width: 45px;
+            height: 45px;
+            transform: translate(3px);
+        }
+        .social-links img[alt="YouTube"] {
+            width: 39px;
+            height: 39px;
+        }
+        
+        .social-links a:hover img {
+            transform: scale(1.15);
         }
         
         .community-link {
